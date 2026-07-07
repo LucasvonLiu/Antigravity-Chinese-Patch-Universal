@@ -114,7 +114,7 @@ function Apply-Patch {
 
         Write-Info "正在注入汉化代码..."
         # 读取补丁代码中 marker 之后的内容
-        $patchCode = @"
+        $patchCode = @'
 // Antigravity Chinese Localization Patch (macOS Optimized)
 // https://github.com/good9527/Antigravity-Chinese-Patch 鈥?娣卞害閲嶅啓鐗?
 // 淇锛氫唬鐮佸尯鍩熼殧绂?/ MutationObserver 鑺傛祦 / 瀛愪覆璇激娑堥櫎
@@ -1033,7 +1033,7 @@ function Apply-Patch {
   console.log('[CN Patch] Antigravity 涓枃姹夊寲琛ヤ竵宸插姞杞?(macOS 浼樺寲鐗?');
 })();
 
-"@
+'@
 
         # 追加到原始 preload.js 末尾（使用 UTF-8 无 BOM，避免干扰 JS 解析）
         $originalContent = [System.IO.File]::ReadAllText($targetPreload, [System.Text.Encoding]::UTF8)
@@ -1216,5 +1216,4 @@ do {
 Write-Host ""
 Write-Host "再见！祝您使用愉快" -ForegroundColor Green
 Write-Host ""
-
 
