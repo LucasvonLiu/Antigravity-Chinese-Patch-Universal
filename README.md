@@ -47,9 +47,8 @@
 Antigravity-Chinese-Patch/
  ├── Windows/
  │    ├── windows汉化工具.exe      (Windows 用户专属原生 GUI)
- │    ├── patch.bat                (经典命令行版)
- │    ├── lib/                     (核心 PowerShell 脚本库)
- │    └── dist/                    (核心汉化注入依赖代码)
+ │    ├── patch.bat                (经典命令行入口)
+ │    └── patch_antigravity.ps1    (核心重写版底层源码)
  │
  ├── macOS/
  │    ├── macOS汉化工具.app        (完全独立绿色的 Mac 应用，支持直接分享)
