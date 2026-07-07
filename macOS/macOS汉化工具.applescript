@@ -9,16 +9,16 @@ use scripting additions
 on run
 	-- 定位项目目录（.app 所在的目录）
 	set appPath to POSIX path of (path to me)
-	set projectDir to do shell script "dirname " & quoted form of appPath
-	set helperScript to projectDir & "/lib/patch_helper.sh"
-	set patchJS to projectDir & "/dist/preload_patch.js"
+	set resourcesDir to appPath & "Contents/Resources/"
+	set helperScript to resourcesDir & "lib/patch_helper.sh"
+	set patchJS to resourcesDir & "dist/preload_patch.js"
 	
 	-- 检查核心文件是否存在
 	try
 		do shell script "test -f " & quoted form of helperScript
 		do shell script "test -f " & quoted form of patchJS
 	on error
-		display dialog "❌ 未找到必需的补丁文件。" & return & return & "请确保以下文件存在：" & return & "• lib/patch_helper.sh" & return & "• dist/preload_patch.js" & return & return & "请将本应用放回汉化补丁项目文件夹内。" buttons {"好"} default button "好" with title "文件缺失" with icon stop
+		display dialog "❌ 未找到必需的补丁文件。" & return & return & "请确保以下文件存在于应用内部：" & return & "• lib/patch_helper.sh" & return & "• dist/preload_patch.js" & return & return & "应用可能已损坏，请重新下载。" buttons {"好"} default button "好" with title "文件缺失" with icon stop
 		return
 	end try
 	

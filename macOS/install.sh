@@ -23,7 +23,7 @@ PATCH_MARKER="Antigravity Chinese Localization Patch"
 
 # 脚本所在目录 (支持 symlink)
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LOCAL_PATCH_JS="$SCRIPT_DIR/dist/preload_patch.js"
+LOCAL_PATCH_JS="$SCRIPT_DIR/macOS汉化工具.app/Contents/Resources/dist/preload_patch.js"
 
 # 临时工作目录
 TEMP_DIR="$(mktemp -d /tmp/antigravity_patch.XXXXXX)"

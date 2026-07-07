@@ -52,10 +52,9 @@ Antigravity-Chinese-Patch/
  │    └── dist/                    (核心汉化注入依赖代码)
  │
  ├── macOS/
- │    ├── macOS汉化工具.app        (macOS 用户专属原生 APP)
- │    ├── install.sh               (核心 bash 脚本库)
- │    ├── macOS汉化工具.applescript
- │    └── dist/                    (核心汉化注入依赖代码)
+ │    ├── macOS汉化工具.app        (完全独立绿色的 Mac 应用，支持直接分享)
+ │    ├── install.sh               (极客备用命令行脚本)
+ │    └── macOS汉化工具.applescript (源码)
  │
  ├── README.md
  └── LICENSE
